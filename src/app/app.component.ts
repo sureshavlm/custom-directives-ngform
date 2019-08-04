@@ -24,14 +24,12 @@ export class AppComponent {
     this.http = _http;
   }
 
-
   ngOnInit() {
     this.http.request('http://localhost:3000/products').subscribe((res) => {
       this.products = res.json();
       console.log(this.products, " Data Received");
     });
   }
-
 
 
   onFormSubmitted(_myForm: NgForm) {
